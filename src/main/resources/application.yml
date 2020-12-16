@@ -1,0 +1,8 @@
+twitter:
+  auth:
+    consumer-key: atHG3TwUeiCrBExvrDZklTB8s
+    consumer-secret: YRIDko7Ds7rkEBH5uSIa4LwutjeWCiV9ddhfT9Qj4HzUrkcNFv
+    access-token: 1189612681017417730-oBUmOg0AvnQH1EeG64duET0c1gKZHd
+    access-token-secret: Z5MEaKwKMkfOkzBkmmiKD0jN8DEZRlEst2TzLDBf9bx3p
+server:
+  port: 8081
