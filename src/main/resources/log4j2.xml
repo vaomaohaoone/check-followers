@@ -3,9 +3,8 @@
     <Appenders>
         <Console name="CONSOLE" />
 
-        <!-- This configuration is much more verbose than the minimal one (few lines). It's here just to demonstrate the optional features -->
         <Elasticsearch name="elasticsearch">
-            <RollingIndexName indexName="log4j2-elasticsearch-jest-test" pattern="yyyy-MM-dd-HH" timeZone="Europe/Moscow" />
+            <RollingIndexName indexName="twitter-followers" pattern="yyyy-MM-dd-HH" timeZone="Europe/Moscow" />
             <ThresholdFilter level="INFO" onMatch="ACCEPT"/>
             <JacksonJsonLayout>
                 <PooledItemSourceFactory poolName="itemPool" itemSizeInBytes="1024" initialPoolSize="6000"
@@ -14,9 +13,7 @@
                 </PooledItemSourceFactory>
             </JacksonJsonLayout>
             <AsyncBatchDelivery batchSize="2000" deliveryInterval="5000">
-                <!-- Use 'classpath:BOOT-INF/classes/<template file name>' if template file is in the Spring Boot app resources (yes, it's ugly) -->
-                <!-- Use 'classpath:<template file name>' if template file is provided by one of your dependencies -->
-                <IndexTemplate name="log4j2-elasticsearch-jest-example-template" path="classpath:indexTemplate.json" />
+                <IndexTemplate name="twitter-followers-template" path="classpath:BOOT-INF/classes/indexTemplate.json" />
                 <JestBufferedHttp serverUris="${env:ELASTIC_URL}"
                                   connTimeout="500"
                                   readTimeout="30000"

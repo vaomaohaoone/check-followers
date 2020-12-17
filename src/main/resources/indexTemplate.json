@@ -1,6 +1,6 @@
 {
   "index_patterns": [
-    "log4j2-elasticsearch-jest-test*"
+    "twitter-followers*"
   ],
   "settings": {
     "index": {
